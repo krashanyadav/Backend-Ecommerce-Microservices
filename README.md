@@ -147,7 +147,6 @@ The project follows synchronous communication using REST APIs.
 
 #  Project Structure
 
-```
 Ecommerce-Microservices/
 
 ├── api-gateway/
@@ -159,7 +158,7 @@ Ecommerce-Microservices/
 ├── docs/
 └── README.md
 
-
+```
 #  Getting Started
 
 ```
