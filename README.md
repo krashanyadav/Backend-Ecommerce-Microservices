@@ -5,9 +5,6 @@ The backend follows industry practices such as JWT Authentication, Redis Caching
 
 ---
 ## 📚 Additional Documentation
-
-Detailed documentation is available in the `docs/` folder.
-
 - System Design
 - Redis
 - Docker
@@ -150,7 +147,6 @@ The project follows synchronous communication using REST APIs.
 
 #  Project Structure
 
-```
 Ecommerce-Microservices/
 
 ├── api-gateway/
@@ -161,9 +157,8 @@ Ecommerce-Microservices/
 ├── payment-service/
 ├── docs/
 └── README.md
+
 ```
-
-
 #  Getting Started
 
 ```
