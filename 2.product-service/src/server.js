@@ -20,9 +20,9 @@ app.use(cookieparser())
 
 let port = process.env.PORT
 
-app.use("/api/category",cateRoute)
-app.use("/api/brand",brandRoute)
-app.use("/api/product",productRoute)
+app.use("/v1",cateRoute)
+app.use("/v2",brandRoute)
+app.use("/v3",productRoute)
 
 
 app.listen(port , ()=>{

@@ -10,15 +10,17 @@ const {
 
 const app = express();
 
-app.use("/", authProxy);
+app.use("/api/auth", authProxy);
 
-app.use("/", productProxy);
+app.use("/api/product", productProxy);
+app.use("/api/category", productProxy);
+app.use("/api/brand", productProxy);
 
-app.use("/", cartProxy);
+app.use("/api/cart", cartProxy);
 
-app.use("/", orderProxy);
+app.use("/api/order", orderProxy);
 
-app.use("/", paymentProxy);
+app.use("/api/pay-order", paymentProxy);
 
 let result = process.env.GATEWAY
 app.get("/",(req, res)=>{

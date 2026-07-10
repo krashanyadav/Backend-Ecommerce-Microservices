@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 
 let port = process.env.PORT
-app.use("/api/cart",cartRoute)
+app.use("/",cartRoute)
 
 
 app.listen(port , ()=>{

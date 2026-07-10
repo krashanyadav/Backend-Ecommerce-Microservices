@@ -23,7 +23,7 @@ app.get("/",rateLimiter(1,20),(re,res)=>{
     res.send("hi iam docker")
 })
 //user authentication
-app.use("/api/auth",authroute)
+app.use("/",authroute)
 
 //getadmin
 

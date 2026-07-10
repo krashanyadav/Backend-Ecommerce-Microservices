@@ -40,7 +40,7 @@ let port = process.env.PORT
 
 
 
-app.use("/api/pay-order",paymentRoute)
+app.use("/",paymentRoute)
 
 app.listen(port , ()=>{
     console.log("server has started at :",port)

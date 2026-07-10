@@ -16,7 +16,7 @@ app.use(cookieParser())
 
 let port = process.env.PORT
 
-app.use("/api/order",orderRoute)
+app.use("/",orderRoute)
 
 app.listen(port , ()=>{
     console.log("server has started at :",port)
