@@ -40,6 +40,10 @@ Nginx is used because it provides:
 ```
 
 ---
+# gateway-1
+- http://localhost:5002
+# gateway-2
+- http://localhost:5003
 
 # Request Flow
 

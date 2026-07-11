@@ -20,7 +20,7 @@ app.use("/api/cart", cartProxy);
 
 app.use("/api/order", orderProxy);
 
-app.use("/api/pay-order", paymentProxy);
+app.use("/api/order-pay", paymentProxy);
 
 let result = process.env.GATEWAY
 app.get("/",(req, res)=>{

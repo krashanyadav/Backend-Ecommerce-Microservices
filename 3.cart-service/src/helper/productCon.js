@@ -4,7 +4,7 @@ const getProductById = async (productId) => {
     try {
 
         const response = await axios.get(
-            `${process.env.PRODUCT_SERVICE_URL}/api/product/getById/${productId}`
+            `${process.env.PRODUCT_SERVICE_URL}/v3/getById/${productId}`
         );
 
         return response.data.data;

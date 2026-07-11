@@ -8,7 +8,7 @@ const getOrder = async (orderId, cookie) => {
     try {
 
         const response = await axios.get(
-            `${process.env.ORDER_SERVICE_URL}/api/order/singOrder/${orderId}`,
+            `${process.env.ORDER_SERVICE_URL}/singOrder/${orderId}`,
             {
                 headers: {
                     Cookie: cookie

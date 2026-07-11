@@ -1,7 +1,6 @@
-
 services:
   nginx:
-    image: nginx
+    image: nginx:latest
     ports:
       - 80:80
     volumes:
@@ -10,7 +9,7 @@ services:
   gateway1:
     build: ./api-gateway
     ports:
-      - 5000:5000
+      - 5002:5009
     environment:
       - GATEWAY=pahla
     env_file:
@@ -19,7 +18,7 @@ services:
   gateway2:
     build: ./api-gateway
     ports:
-      - 5001:5000
+      - 5003:5009
     environment:
       - GATEWAY=dusra
     env_file:

@@ -126,26 +126,25 @@
         },
         {
           "name": "getprofile",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": "{\r\n    \"email\":\"namo@gmail.com\",\r\n    \"password\":\"namo#321\"\r\n}"
             },
             "url": {
-              "raw": "localhost:4000/api/auth/getprofile",
+              "raw": "https://auth-service-amln.onrender.com/api/auth/login",
+              "protocol": "https",
               "host": [
-                "localhost"
+                "auth-service-amln",
+                "onrender",
+                "com"
               ],
-              "port": "4000",
               "path": [
                 "api",
                 "auth",
-                "getprofile"
+                "login"
               ]
             }
           },
@@ -172,8 +171,8 @@
                   "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-11-21 221510.png"
                 },
                 {
-                  "key": "",
-                  "value": "",
+                  "key": "lastName",
+                  "value": "yaduvanshi",
                   "type": "text",
                   "uuid": "600eab17-5185-4d23-b5e8-9b77f9f36dad",
                   "disabled": true
@@ -181,11 +180,12 @@
               ]
             },
             "url": {
-              "raw": "localhost:4000/api/auth/updateprofile",
+              "raw": "http://localhost:5002/api/auth/updateprofile",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
                 "auth",
@@ -201,34 +201,16 @@
             "method": "DELETE",
             "header": [],
             "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "profileImage",
-                  "type": "file",
-                  "uuid": "ee1a8f8e-b10d-448e-ba24-9d7a5690d21c",
-                  "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/mama.pdf"
-                },
-                {
-                  "key": "lastName",
-                  "value": "yaduvanshi",
-                  "type": "text",
-                  "uuid": "b73a46d2-2f48-4718-80be-c70c08444320"
-                },
-                {
-                  "key": "firstName",
-                  "value": "shibbu",
-                  "type": "text",
-                  "uuid": "89214864-df66-4df6-8676-061a9e959d81"
-                }
-              ]
+              "mode": "raw",
+              "raw": ""
             },
             "url": {
-              "raw": "localhost:4000/api/auth/deleteprofile",
+              "raw": "http://localhost:5002/api/auth/deleteprofile",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
                 "auth",
@@ -245,7 +227,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"oldPassword\":\"krashan#321\",\r\n    \"newPassword\":\"krash@123\"\r\n}",
+              "raw": "{\r\n    \"oldPassword\":\"gopal@123\",\r\n    \"newPassword\":\"krashan@123\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -253,15 +235,15 @@
               }
             },
             "url": {
-              "raw": "localhost:4000/api/auth/changepass",
+              "raw": "http://localhost:5002/api/authchangepass",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
-                "auth",
-                "changepass"
+                "authchangepass"
               ]
             }
           },
@@ -282,11 +264,12 @@
               }
             },
             "url": {
-              "raw": "localhost:4000/api/auth/forgetpass",
+              "raw": "http://localhost:5002/api/auth/forgetpass",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
                 "auth",
@@ -303,7 +286,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"email\":\"krashangopalyadav9@gmail.com\",\r\n    \"otp\": \"662465\"\r\n}",
+              "raw": "{\r\n    \"email\":\"krashangopalyadav9@gmail.com\",\r\n    \"otp\": \"663707\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -311,11 +294,12 @@
               }
             },
             "url": {
-              "raw": "localhost:4000/api/auth/verify-otp",
+              "raw": "http://localhost:5002/api/auth/verify-otp",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
                 "auth",
@@ -340,11 +324,12 @@
               }
             },
             "url": {
-              "raw": "localhost:4000/api/auth/reset-pass",
+              "raw": "http://localhost:5002/api/auth/reset-pass",
+              "protocol": "http",
               "host": [
                 "localhost"
               ],
-              "port": "4000",
+              "port": "5002",
               "path": [
                 "api",
                 "auth",
@@ -369,7 +354,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"name\":\"small electronics\",\r\n    \"description\":\"there is present smart best electronics\"\r\n}",
+                  "raw": "{\r\n    \"name\":\"electronics tarch\",\r\n    \"description\":\"top quality electronics\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -377,14 +362,15 @@
                   }
                 },
                 "url": {
-                  "raw": "localhost:4001/api/category/create",
+                  "raw": "localhost:5002/api/category/v1/create",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "category",
+                    "v1",
                     "create"
                   ]
                 }
@@ -395,7 +381,20 @@
               "name": "getall",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/category/v1/getall",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "category",
+                    "v1",
+                    "getall"
+                  ]
+                }
               },
               "response": []
             },
@@ -403,7 +402,21 @@
               "name": "getsingle",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/category/v1/getsingle/girls-women",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "category",
+                    "v1",
+                    "getsingle",
+                    "girls-women"
+                  ]
+                }
               },
               "response": []
             },
@@ -414,7 +427,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"name\":\"mini watch collection\",\r\n    \"description\":\"this product is so good at this time\"\r\n}",
+                  "raw": "{\r\n    \"name\":\"gens\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -422,16 +435,17 @@
                   }
                 },
                 "url": {
-                  "raw": "localhost:4001/api/category/update/6a4b271dfdf500b8c22e6869",
+                  "raw": "localhost:5002/api/category/v1/update/6a4f3aab8c0b07e64c7b5853",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "category",
+                    "v1",
                     "update",
-                    "6a4b271dfdf500b8c22e6869"
+                    "6a4f3aab8c0b07e64c7b5853"
                   ]
                 }
               },
@@ -443,14 +457,15 @@
                 "method": "DELETE",
                 "header": [],
                 "url": {
-                  "raw": "localhost:4001/api/category/delete/6a4b271dfdf500b8c22e6869",
+                  "raw": "localhost:5002/api/category/v1/delete/6a4b271dfdf500b8c22e6869",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "category",
+                    "v1",
                     "delete",
                     "6a4b271dfdf500b8c22e6869"
                   ]
@@ -470,7 +485,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"name\":\"samsung\",\r\n    \"description\":\"one of the best quality product of this brand\"\r\n}",
+                  "raw": "{\r\n    \"name\":\"Nokia\",\r\n    \"description\":\"Nokia products are unique to all\"\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -478,14 +493,15 @@
                   }
                 },
                 "url": {
-                  "raw": "localhost:4001/api/brand/create",
+                  "raw": "localhost:5002/api/brand/v2/create",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "brand",
+                    "v2",
                     "create"
                   ]
                 }
@@ -498,14 +514,15 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "localhost:4001/api/brand/getall",
+                  "raw": "localhost:5002/api/brand/v2/getall",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "brand",
+                    "v2",
                     "getall"
                   ]
                 }
@@ -516,23 +533,74 @@
               "name": "sgetsingle",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/brand/v2/getsingle/denim",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "brand",
+                    "v2",
+                    "getsingle",
+                    "denim"
+                  ]
+                }
               },
               "response": []
             },
             {
               "name": "updateBrand",
               "request": {
-                "method": "GET",
-                "header": []
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Roadstar product\",\r\n    \"description\":\"one of the best quality product of roadStar brand\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "localhost:5002/api/brand/v2/update/6a4f3ca88c0b07e64c7b5858",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "brand",
+                    "v2",
+                    "update",
+                    "6a4f3ca88c0b07e64c7b5858"
+                  ]
+                }
               },
               "response": []
             },
             {
               "name": "soft-delete",
               "request": {
-                "method": "GET",
-                "header": []
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/brand/v2/delete/6a4b7229241734b31f124472",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "brand",
+                    "v2",
+                    "delete",
+                    "6a4b7229241734b31f124472"
+                  ]
+                }
               },
               "response": []
             }
@@ -545,6 +613,107 @@
               "name": "create",
               "request": {
                 "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "botels",
+                      "type": "text",
+                      "uuid": "7546244a-c1de-42e2-8654-8b8a18fbfd69"
+                    },
+                    {
+                      "key": "description",
+                      "value": "strength good",
+                      "type": "text",
+                      "uuid": "6f5f8b82-ef8d-466f-9736-5137642fc661"
+                    },
+                    {
+                      "key": "price",
+                      "value": "140",
+                      "type": "text",
+                      "uuid": "433834b8-74df-4da4-a47a-ef9621fa5633"
+                    },
+                    {
+                      "key": "discountPrice",
+                      "value": "120",
+                      "type": "text",
+                      "uuid": "01e21917-febf-42b9-a653-50aa00e25729"
+                    },
+                    {
+                      "key": "stock",
+                      "value": "120",
+                      "type": "text",
+                      "uuid": "5abae192-1a77-4438-9e85-138a14320d07"
+                    },
+                    {
+                      "key": "category",
+                      "value": "6a4f3aab8c0b07e64c7b5853",
+                      "type": "text",
+                      "uuid": "0eeb1566-9a33-4016-a23b-3c11fa8d0184"
+                    },
+                    {
+                      "key": "brand",
+                      "value": "6a4f3c7c8c0b07e64c7b5857",
+                      "type": "text",
+                      "uuid": "e6bef0d2-451e-4937-a0d4-55790c498779"
+                    },
+                    {
+                      "key": "isFeatured",
+                      "value": "true",
+                      "type": "text",
+                      "uuid": "c26b1797-4981-43ca-aeb0-807f3e0bbe8a"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "461771a2-36f5-42c4-8903-58c0391e8087",
+                      "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-10-28 001251.png"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "eed00fb5-d66d-412b-a015-c060fab9e05e",
+                      "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-10-21 224244.png"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "1cfe6ec0-d8f9-4fd6-a323-d03cdf05143a",
+                      "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-10-10 003057.png"
+                    },
+                    {
+                      "key": "images",
+                      "type": "file",
+                      "uuid": "333d6a17-e054-444a-a128-99aee93c69a8",
+                      "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-10-10 003143.png"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "localhost:5002/api/product/v3/create",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "product",
+                    "v3",
+                    "create"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getall",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
                 "header": [],
                 "body": {
                   "mode": "formdata",
@@ -624,25 +793,18 @@
                   ]
                 },
                 "url": {
-                  "raw": "localhost:4001/api/product/create",
+                  "raw": "localhost:5002/api/product/v3/getall",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "product",
-                    "create"
+                    "v3",
+                    "getall"
                   ]
                 }
-              },
-              "response": []
-            },
-            {
-              "name": "getall",
-              "request": {
-                "method": "GET",
-                "header": []
               },
               "response": []
             },
@@ -650,7 +812,21 @@
               "name": "getsingle",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/product/v3/getsingle/trimmer",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "product",
+                    "v3",
+                    "getsingle",
+                    "trimmer"
+                  ]
+                }
               },
               "response": []
             },
@@ -787,14 +963,15 @@
                   ]
                 },
                 "url": {
-                  "raw": "localhost:4001/api/product/delete/6a4f40b68c0b07e64c7b5875",
+                  "raw": "localhost:5002/api/product/v3/delete/6a4f40b68c0b07e64c7b5875",
                   "host": [
                     "localhost"
                   ],
-                  "port": "4001",
+                  "port": "5002",
                   "path": [
                     "api",
                     "product",
+                    "v3",
                     "delete",
                     "6a4f40b68c0b07e64c7b5875"
                   ]
@@ -806,7 +983,42 @@
               "name": "getfind_query",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/product/v3/getfind?search=trimmer&Category=elctronics&Brand=Nokiya&page=1&limit=8",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "product",
+                    "v3",
+                    "getfind"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "trimmer"
+                    },
+                    {
+                      "key": "Category",
+                      "value": "elctronics"
+                    },
+                    {
+                      "key": "Brand",
+                      "value": "Nokiya"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "8"
+                    }
+                  ]
+                }
               },
               "response": []
             },
@@ -814,7 +1026,21 @@
               "name": "getproductById",
               "request": {
                 "method": "GET",
-                "header": []
+                "header": [],
+                "url": {
+                  "raw": "localhost:5002/api/product/v3/getById/6a4f3ee78c0b07e64c7b585a",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "5002",
+                  "path": [
+                    "api",
+                    "product",
+                    "v3",
+                    "getById",
+                    "6a4f3ee78c0b07e64c7b585a"
+                  ]
+                }
               },
               "response": []
             }
@@ -832,7 +1058,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"productId\": \"6a4f3ee78c0b07e64c7b585a\",\r\n    \"quantity\": \"3\"\r\n}",
+              "raw": "{\r\n    \"productId\": \"6a4f3ee78c0b07e64c7b585a\",\r\n    \"quantity\": \"3\"\r\n}\r\n\r\n\r\n//gatewat localhost:5002/api/cart/",
               "options": {
                 "raw": {
                   "language": "json"
@@ -840,11 +1066,11 @@
               }
             },
             "url": {
-              "raw": "localhost:4002/api/cart/addCart",
+              "raw": "localhost:5002/api/cart/addCart",
               "host": [
                 "localhost"
               ],
-              "port": "4002",
+              "port": "5002",
               "path": [
                 "api",
                 "cart",
@@ -860,11 +1086,11 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "localhost:4002/api/cart/getCart",
+              "raw": "localhost:5002/api/cart/getCart",
               "host": [
                 "localhost"
               ],
-              "port": "4002",
+              "port": "5002",
               "path": [
                 "api",
                 "cart",
@@ -881,7 +1107,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"productId\":\"6a4ba58e691a44e6f23092b9\",\r\n    \"quantity\":\"5\"\r\n}",
+              "raw": "{\r\n    \"productId\":\"6a4f3f598c0b07e64c7b585f\",\r\n    \"quantity\":\"5\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -889,11 +1115,11 @@
               }
             },
             "url": {
-              "raw": "localhost:4002/api/cart/updateProd-qty",
+              "raw": "localhost:5002/api/cart/updateProd-qty",
               "host": [
                 "localhost"
               ],
-              "port": "4002",
+              "port": "5002",
               "path": [
                 "api",
                 "cart",
@@ -913,16 +1139,16 @@
               "raw": "{\r\n    \"productId\":\"6a4ba58e691a44e6f23092b9\",\r\n    \"quantity\":\"5\"\r\n}"
             },
             "url": {
-              "raw": "localhost:4002/api/cart/rem-product/6a4ba4ad691a44e6f23092af",
+              "raw": "localhost:5002/api/cart/rem-product/6a4f3f598c0b07e64c7b585f",
               "host": [
                 "localhost"
               ],
-              "port": "4002",
+              "port": "5002",
               "path": [
                 "api",
                 "cart",
                 "rem-product",
-                "6a4ba4ad691a44e6f23092af"
+                "6a4f3f598c0b07e64c7b585f"
               ]
             }
           },
@@ -938,15 +1164,16 @@
               "raw": "{\r\n    \"productId\":\"6a4ba58e691a44e6f23092b9\",\r\n    \"quantity\":\"5\"\r\n}"
             },
             "url": {
-              "raw": "localhost:4002/api/cart/clear-cart",
+              "raw": "localhost:5002/api/cart/clear-cart/6a4f3f598c0b07e64c7b585f",
               "host": [
                 "localhost"
               ],
-              "port": "4002",
+              "port": "5002",
               "path": [
                 "api",
                 "cart",
-                "clear-cart"
+                "clear-cart",
+                "6a4f3f598c0b07e64c7b585f"
               ]
             }
           },
@@ -964,7 +1191,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"shippingAddress\": {\r\n    \"fullName\": \"Krashan Yadav\",\r\n    \"phone\": \"9876543210\",\r\n    \"address\": \"ABC Colony\",\r\n    \"city\": \"Bhopal\",\r\n    \"state\": \"Madhya Pradesh\",\r\n    \"pincode\": \"462001\"\r\n  }\r\n}",
+              "raw": "{\r\n  \"shippingAddress\": {\r\n    \"fullName\": \"golu Yadav\",\r\n    \"phone\": \"9876543210\",\r\n    \"address\": \"ABC Colony\",\r\n    \"city\": \"Bhopal\",\r\n    \"state\": \"Madhya Pradesh\",\r\n    \"pincode\": \"462001\"\r\n  }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -972,11 +1199,11 @@
               }
             },
             "url": {
-              "raw": "localhost:4003/api/order/create",
+              "raw": "localhost:5002/api/order/create",
               "host": [
                 "localhost"
               ],
-              "port": "4003",
+              "port": "5002",
               "path": [
                 "api",
                 "order",
@@ -999,11 +1226,11 @@
               "raw": "{\r\n    \"productId\":\"6a4ba58e691a44e6f23092b9\",\r\n    \"quantity\":\"2\"\r\n}"
             },
             "url": {
-              "raw": "localhost:4003/api/order/myorder",
+              "raw": "localhost:5002/api/order/myorder",
               "host": [
                 "localhost"
               ],
-              "port": "4003",
+              "port": "5002",
               "path": [
                 "api",
                 "order",
@@ -1015,9 +1242,29 @@
         },
         {
           "name": "single-order",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
-            "header": []
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\":\"6a4ba58e691a44e6f23092b9\",\r\n    \"quantity\":\"2\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:5002/api/order/singOrder/6a52473893ec749a8b50d9b2",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "order",
+                "singOrder",
+                "6a52473893ec749a8b50d9b2"
+              ]
+            }
           },
           "response": []
         },
@@ -1026,17 +1273,26 @@
           "request": {
             "method": "PUT",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": {
-              "raw": "localhost:4003/api/order/cancel/6a4deb97b8e36582b8fb206a",
+              "raw": "localhost:5002/api/order/cancel/6a4f9bd86a1612a5312ebba9",
               "host": [
                 "localhost"
               ],
-              "port": "4003",
+              "port": "5002",
               "path": [
                 "api",
                 "order",
                 "cancel",
-                "6a4deb97b8e36582b8fb206a"
+                "6a4f9bd86a1612a5312ebba9"
               ]
             }
           },
@@ -1045,16 +1301,60 @@
         {
           "name": "only admin update order status",
           "request": {
-            "method": "GET",
-            "header": []
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"orderStatus\":\"Confiremed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:5002/api/order/updtOdr-sts/6a4f9bd86a1612a5312ebba9",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "order",
+                "updtOdr-sts",
+                "6a4f9bd86a1612a5312ebba9"
+              ]
+            }
           },
           "response": []
         },
         {
           "name": "update paymentStatus",
           "request": {
-            "method": "GET",
-            "header": []
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"paymentStatus\":\"Paid\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:5002/api/order/updtPayStatus/6a4f9bd86a1612a5312ebba9",
+              "host": [
+                "localhost"
+              ],
+              "port": "5002",
+              "path": [
+                "api",
+                "order",
+                "updtPayStatus",
+                "6a4f9bd86a1612a5312ebba9"
+              ]
+            }
           },
           "response": []
         }
@@ -1088,7 +1388,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"orderId\":\"6a4e2487cd38880563af74d2\"\r\n}",
+              "raw": "{\r\n    \"orderId\":\"6a4f9bd86a1612a5312ebba9\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1096,14 +1396,14 @@
               }
             },
             "url": {
-              "raw": "localhost:4004/api/pay-order/create",
+              "raw": "localhost:5002/api/order-pay/create",
               "host": [
                 "localhost"
               ],
-              "port": "4004",
+              "port": "5002",
               "path": [
                 "api",
-                "pay-order",
+                "order-pay",
                 "create"
               ]
             }

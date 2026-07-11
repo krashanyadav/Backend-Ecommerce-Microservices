@@ -5,7 +5,7 @@ const getCart = async (Cookies) => {
     try {
 
         const response = await axios.get(
-            `${process.env.CART_SERVICE_URL}/api/cart/getCart`,
+            `${process.env.CART_SERVICE_URL}/getCart`,
             {
                 headers: {
                     Cookie: Cookies
